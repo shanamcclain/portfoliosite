@@ -250,6 +250,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Email.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeViewModels.cs" />
@@ -273,21 +275,39 @@
     <Content Include="Assets\img\backgroundpexels-photo-169573.jpg" />
     <Content Include="Assets\img\banner.jpeg" />
     <Content Include="Assets\img\cta-banner.jpg" />
+    <Content Include="Assets\img\imageedit_1_3155391220.jpg" />
+    <Content Include="Assets\img\imageedit_1_3212273553.jpg" />
+    <Content Include="Assets\img\imageedit_1_3635499618.jpg" />
+    <Content Include="Assets\img\imageedit_1_4372749932.jpg" />
+    <Content Include="Assets\img\imageedit_1_6112919423.jpg" />
+    <Content Include="Assets\img\imageedit_1_8510233387.jpg" />
+    <Content Include="Assets\img\imageedit_1_8857662543.jpg" />
+    <Content Include="Assets\img\kevin-bhagat-343433 %281%29.jpg" />
+    <Content Include="Assets\img\luca-bravo-210213.jpg" />
     <Content Include="Assets\img\port01.jpg" />
     <Content Include="Assets\img\port02.jpg" />
     <Content Include="Assets\img\port03.jpg" />
     <Content Include="Assets\img\port04.jpg" />
     <Content Include="Assets\img\port05.jpg" />
     <Content Include="Assets\img\port06.jpg" />
-    <None Include="Views\Home\index.cshtml" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="private.config" />
+    <None Include="Properties\PublishProfiles\ssanders-portfolio - Web Deploy.pubxml" />
+    <None Include="Views\Home\Index.cshtml" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\custom.js" />
     <Content Include="Assets\js\jquery.easing.min.js" />
     <Content Include="Assets\js\jquery.min.js" />
     <Content Include="Assets\js\wow.js" />
     <Content Include="Assets\readme.txt" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\SyntaxHighlighter\shCore.css" />
     <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
@@ -307,12 +327,9 @@
     <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
     <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -345,6 +362,8 @@
     <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
@@ -356,6 +375,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
     <Content Include="Scripts\SyntaxHighlighter\shAutoloader.js" />
     <Content Include="Scripts\SyntaxHighlighter\shBrushAppleScript.js" />
     <Content Include="Scripts\SyntaxHighlighter\shBrushAS3.js" />
@@ -433,9 +453,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

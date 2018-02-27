@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "JQueryExercise";
+}
+
+<h2 id="hiddentitle">JQueryExercise</h2>
+
+<!--change color of the title
+    change font size of the title
+    move to the right side of the page-->
+
+
+
+<button onclick="myhideFunc()">Javascript Hide</button> <br />
+<button id="mybtn">JQuery Hide</button>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    function myhideFunc() {
+        document.getElementById("hiddentitle").style.display = "none";
+
+    }
+    function myjqueryhideFunction() {
+        $("#hiddentitle").csstoggle();
+
+        $("mybtn").click(
+    function () {
+        $("#hiddentitle").css({
+            "color": "red", "font-size": "150%", "margin-left": "500px"
+        });
+
+    }
+</script>

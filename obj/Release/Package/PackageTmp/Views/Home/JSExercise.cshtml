@@ -1,0 +1,241 @@
+﻿
+@{
+    ViewBag.Title = "JSExercise";
+}
+
+
+
+<!DOCTYPE html>
+
+
+
+<h2>JSExercise</h2>
+
+<input type="number" id="fNum" />
+<p></p>
+<input type="number" id="sNum" />
+<p></p>
+<input type="number" id="tNum" />
+<p></p>
+<input type="number" id="aNum" />
+<p></p>
+<input type="number" id="eNum" />
+<br />
+<p>=</p>
+<p id="result"></p>
+<button onclick="calculator()">Add</button>
+<br />
+<br />
+<input type="number" id="zNum" />
+<p></p>
+<input type="number" id="bNum" />
+<p></p>
+<input type="number" id="cNum" />
+<p></p>
+<input type="number" id="dNum" />
+<p></p>
+<input type="number" id="yNum" />
+<br />
+<p>=</p>
+<p id="product"></p>
+<button onclick="sum()">Product</button>
+<br />
+<br />
+<input type="number" id="lNum" />
+<p></p>
+<input type="number" id="gNum" />
+<p></p>
+<input type="number" id="hNum" />
+<p></p>
+<input type="number" id="iNum" />
+<p></p>
+<input type="number" id="jNum" />
+<br />
+<p>=</p>
+<p id="mean"></p>
+<button onclick="sumplus()">mean</button>
+<br />
+<br />
+<input type="number" id="a" />
+<p></p>
+<input type="number" id="b" />
+<p></p>
+<input type="number" id="c" />
+<p></p>
+<input type="number" id="d" />
+<p></p>
+<input type="number" id="e" />
+<br />
+<p>=</p>
+<p id="greatest"></p>
+<button onclick="highestNumber()">greatest</button>
+<br />
+<br />
+<input type="number" id="f" />
+<p></p>
+<input type="number" id="g" />
+<p></p>
+<input type="number" id="h" />
+<p></p>
+<input type="number" id="i" />
+<p></p>
+<input type="number" id="j" />
+<br />
+<p>=</p>
+<p id="lowest"></p>
+<button onclick="lowestNumber()">lowest</button>
+<br />
+<br />
+<h2>Factorial</h2>
+    Enter Number:
+<input id="num">
+<button onclick="show()">Factorial</button>
+<input id="answer">
+<br />
+<br />
+<h3>FizzBuzz</h3>
+<input type="number" id="one" placeholder="Enter number one" />
+<br />
+<input type="number" id="two" placeholder="Enter number two" />
+<button onclick="iterator()">Iterate</button>
+<p id="iteratorResult"></p>
+<br />
+<br />
+<input type="text" name="getStr" id="getStr" />
+<br />
+<div id="resultMsg"></div>
+<button onclick="chkStringPalindrome()">result</button>
+<br />
+<br />
+
+
+
+
+    <script>
+        function calculator() {
+            var value1 = Number(document.getElementById("fNum").value);
+            var value2 = Number(document.getElementById("sNum").value);
+            var value3 = Number(document.getElementById("tNum").value);
+            var value4 = Number(document.getElementById("aNum").value);
+            var value5 = Number(document.getElementById("eNum").value);
+            document.getElementById("result").innerHTML = value1 + value2 + value3 + value4 + value5;
+        }
+     
+
+        function sum() {
+            var value1 = Number(document.getElementById("zNum").value);
+            var value2 = Number(document.getElementById("bNum").value);
+            var value3 = Number(document.getElementById("cNum").value);
+            var value4 = Number(document.getElementById("dNum").value);
+            var value5 = Number(document.getElementById("yNum").value);
+            document.getElementById("product").innerHTML = value1 * value2 * value3 * value4 * value5;
+        }
+        
+        function sumplus() {
+            var value1 = Number(document.getElementById("lNum").value);
+            var value2 = Number(document.getElementById("gNum").value);
+            var value3 = Number(document.getElementById("hNum").value);
+            var value4 = Number(document.getElementById("iNum").value);
+            var value5 = Number(document.getElementById("jNum").value);
+            var result = (value1 + value2 + value3 + value4 + value5) / 5;
+            document.getElementById("mean").innerHTML = result;
+        }
+        
+        function highestNumber() {
+            var value1 = Number(document.getElementById('a').value);
+            var value2 = Number(document.getElementById('b').value);
+            var value3 = Number(document.getElementById('c').value);
+            var value4 = Number(document.getElementById('d').value);
+            var value5 = Number(document.getElementById('e').value);
+            var result = Math.max(value1, value2, value3, value4, value5);
+            document.getElementById("greatest").innerHTML = result;
+        }
+        
+        function lowestNumber() {
+            var value1 = Number(document.getElementById('f').value);
+            var value2 = Number(document.getElementById('g').value);
+            var value3 = Number(document.getElementById('h').value);
+            var value4 = Number(document.getElementById('i').value);
+            var value5 = Number(document.getElementById('j').value);
+            var result = Math.min(value1, value2, value3, value4, value5);
+            document.getElementById("lowest").innerHTML = result;
+        }
+        
+        function show(x) {
+            var i, no, fact;
+            fact = 1;
+            no = Number(document.getElementById("num").value);
+            for (i = 1; i <= no; i++) {
+                fact = fact * i;
+            }
+            document.getElementById("answer").value = fact;
+        }
+        
+        function chkStringPalindrome() {
+            var isPalindrome = true;
+            var resultMsg = document.getElementById("resultMsg");
+            var strElement = document.getElementById("getStr");
+            var str = "";
+            if (strElement != null) {
+                str = strElement.value;
+                var strLength = str.length;
+                var mid = strLength / 2;
+                for (i = 0; i < mid; i++) {
+                    if (str.charAt(i) != str.charAt(strLength - i - 1)) {
+                        isPalindrome = false;
+                        break;
+                    }
+                }
+            }
+            if (isPalindrome) {
+                resultMsg.innerHTML = str + "\ is a Palindrome";
+            } else {
+                resultMsg.innerHTML = str + "\ is not a Palindrome";
+            }
+        }
+
+        
+
+        function iterator() {
+            var value1 = Number(document.getElementById("one").value);
+            var value2 = Number(document.getElementById("two").value);
+            var result = "";
+
+            for (i = 1; i <= 100; i++) {
+
+                // if the number is divisible by both values, write "FizzBuzz"
+                if (i % value1 === 0 && i % value2 === 0) {
+                    result += "FizzBuzz ";
+                }
+
+                // if the number is divisible by first value, write "Fizz"
+                else if (i % value1 === 0) {
+                    result += "Fizz ";
+                }
+
+                // if the number is divisible by second vaule, write "Buzz"
+                else if (i % value2 === 0) {
+                    result += "Buzz ";
+
+                }
+
+                else {
+                    result += i + " ";
+                }
+            }
+            document.getElementById("iteratorResult").innerHTML = result;
+        }
+        
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
