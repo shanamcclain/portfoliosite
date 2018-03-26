@@ -2,6 +2,7 @@
 using portfoliosite.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -30,21 +31,32 @@ namespace portfoliosite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Contact(string name, string email, string subject, string message)
+        public async Task<ActionResult> Contact(Email model)
         {
+            if (ModelState.IsValid)
+            {
+                try
+                {
 
-            var newContact = name;
-            var svc = new EmailService();
-            var msg = new IdentityMessage();
-            msg.Subject = "Contact From Portfolio Site";
-            msg.Body = "\r\n You have recieved a request to contact from " + newContact + "(" + email + ")" + "\r\n"
-                         + "\r\n With the following message: \r\n\t"
-                         + message;
-            msg.Destination = "shanamcclain7@gmail.com";
+                    EmailService ems = new EmailService();
+                    IdentityMessage msg = new IdentityMessage();
 
-            await svc.SendAsync(msg);
-            TempData["BlogMessage"] = "Your Email has been sent";
-            return RedirectToAction("Index", "Home");
+                    msg.Body = "<p>Email From: <bold>" + model.FromName + "</bold> " + model.FromEmail + "</bold> " + model.Subject + "</p><p>Message:</p><p>" + model.Body + "</p>" + Environment.NewLine +
+                        "<p>This is a message from your portfolio site.The name and Email of the contacting person is above.</p>";
+
+                    msg.Destination = ConfigurationManager.AppSettings["emailto"];
+                    msg.Subject = "Portfolio Contact Email";
+                    await ems.SendMailAsync(msg);
+                    TempData["BlogMessage"] = "Your Email has been sent";
+
+                }
+                catch (Exception Ex)
+                {
+                    //Console.WriteLine(Ex.Message);
+                    await Task.FromResult(0);
+                }
+            }
+            return RedirectToAction("Index");
         }
 
     }

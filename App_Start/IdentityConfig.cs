@@ -32,7 +32,7 @@ namespace portfoliosite
             var GmailPassword = WebConfigurationManager.AppSettings["password"];
             var host = WebConfigurationManager.AppSettings["host"];
             int port = Convert.ToInt32(WebConfigurationManager.AppSettings["port"]);
-            var from = new MailAddress(WebConfigurationManager.AppSettings["emailto"], "NYBTracker");
+            var from = new MailAddress(WebConfigurationManager.AppSettings["emailfrom"], "Portfolio");
 
             //Email object set up
             var email = new MailMessage(from, new MailAddress(message.Destination))

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model portfoliosite.Models.Contact
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -61,8 +62,15 @@
             <div class="container text-center">
                 <div class="wrapper wow fadeInUp delay-05s">
                     <h2 class="top-title"></h2>
-                    <h3 class="title">Shana Sanders' Portfolio</h3>
+                    <br />
+                    <br />
+                    <h3 class="title">Shana Sanders</h3>
                     <h4 class="sub-title"> Full Stack Web Developer </h4>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
             </div>
         </div>
@@ -74,7 +82,7 @@
             <div class="row">
                 <div class="cta-info text-center">
                     <h2 div class="head-title">About Me </h2>
-                    <h3><span class="dec-tec"></span>I am a Web Designer and Front End Developer focused on crafting clean and user-friendly experiences.<span class="dec-tec"></span></h3>
+                    <h3><span class="dec-tec"></span>I am a Full Stack Web Developer focused on crafting clean and user-friendly experiences.<span class="dec-tec"></span></h3>
                 </div>
             </div>
         </div>
@@ -94,7 +102,7 @@
                 <div class="col-md-9">
                     <div class="col-md-6 wow fadeInRight delay-02s">
                         <div class="icon">
-                            <i class="fa fa-paint-brush"></i>
+                            <i class="fa fa-html5"></i>
                         </div>
                         <div class="icon-text">
                             <h3 class="txt-tl">HTML</h3>
@@ -112,7 +120,7 @@
                     </div>
                     <div class="col-md-6 wow fadeInRight delay-04s">
                         <div class="icon">
-                            <i class="fa fa-mobile"></i>
+                            <i class="fa fa-code"></i>
                         </div>
                         <div class="icon-text">
                             <h3 class="txt-tl">Javascript</h3>
@@ -121,7 +129,7 @@
                     </div>
                     <div class="col-md-6 wow fadeInRight delay-04s">
                         <div class="icon">
-                            <i class="fa fa-desktop"></i>
+                            <i class="fa fa-paint-brush"></i>
                         </div>
                         <div class="icon-text">
                             <h3 class="txt-tl">CSS</h3>
@@ -209,7 +217,7 @@
                 <div class="col-md-9 col-sm-12">
                     <div id="effectOne" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_8857662543.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_8857662543.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                 height: 92%;
                                     width: 94%;
@@ -251,7 +259,7 @@
                     </div>
                     <div id="effectTwo" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_3155391220.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_3155391220.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                     height: 92%;
                                     width: 94%;
@@ -293,7 +301,7 @@
                     </div>
                     <div id="effectThree" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_8510233387.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_8510233387.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                     height: 92%;
                                     width: 94%;
@@ -335,7 +343,7 @@
                     </div>
                     <div id="effectFour" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_3635499618.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_3635499618.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                 height: 92%;
                                     width: 94%;
@@ -377,7 +385,7 @@
                     </div>
                     <div id="effectFive" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_6112919423.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_6112919423.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                     height: 92%;
                                     width: 94%;
@@ -419,7 +427,7 @@
                     </div>
                     <div id="effectSix" class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="~/Assets/img/imageedit_1_4372749932.jpg" alt="" class="img-responsive grayscale">
+                            <img src="~/Assets/img/imageedit_1_4372749932.jpg" alt="" class="img-responsive">
                             <div class="overlay" style="
                                 height: 92%;
                                     width: 94%;
@@ -482,7 +490,6 @@
     <!---->
     <section class="section-padding section wow fadeInUp delay-05s" id="contact">
         <div class="container">
-
             <div class="row white">
                 <div class="col-md-8 col-sm-12">
                     <div class="section-title">
@@ -494,35 +501,31 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="col-md-4 col-sm-6" style="padding-left:0px;">
                         <h3 class="cont-title">Email Me</h3>
-                        <div id="sendmessage">Your message has been sent. Thank you!</div>
-                        <div id="errormessage"></div>
                         <div class="contact-info">
-                            @*<form action="" method="post" role="form" class="contactForm">*@
-                                @using (Html.BeginForm())
-                                {
-                                            @Html.AntiForgeryToken()
-                                            <div class="form-group">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                        <div class="validation"></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                        <div class="validation"></div>
-                                    </div>
+                            @using (Html.BeginForm("Contact","Home"))
+    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            <input type="text" name="FromName" class="form-control" id="name" placeholder="Full Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="FromEmail" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
 
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                        <div class="validation"></div>
-                                    </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
 
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                        <div class="validation"></div>
-                                    </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="body" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
 
-                                    <button type="submit" class="button5" style=" color: white; background-color: #1C2F2F; border: 2px solid #1c2f2f;">Send</button>
-                                }
-                            @*</form>*@
+                        <input type="submit" value="Send" class="button5" style=" color: white; background-color: #1C2F2F; border: 2px solid #1c2f2f;"/>
+}
                         </div>
 
                     </div>
@@ -530,7 +533,6 @@
                         <h3 class="cont-title"></h3>
                         <div class="location-info">
                             <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>High Point, Nc</p>
-                            <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>(336)906-7160</p>
                             <p class="white">
                                 <span aria-hidden="true" class="fa fa-envelope"></span>shanamcclain7@gmail.com
                             </p>
@@ -1107,11 +1109,11 @@
         }
 
     </script>
-    <script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    @*<script>
             $(function () {
                 swal('Thank you!', '@TempData["BlogMessage"]', 'success');
             });
-    </script>
-    <script src="~/Scripts/sweetalert.min.js"></script>
+    </script>*@
 </body>
 </html>
